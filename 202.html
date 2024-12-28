@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Merry X-mas</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="happy">Happy New Year !!!!</div>
+<div class="new_year">
+    <span>202</span>
+    <span class="four">4</span>
+    <span class="five"></span>
+    <div class="balloon">click here</div>
+</div>
+<div class="fireworks">
+    <div class="f1">
+        <span><i></i></span>
+        <span><i></i></span>
+        <span><i></i></span>
+    </div>
+    <div class="f2">
+        <span><i></i></span>
+        <span><i></i></span>
+        <span><i></i></span>
+    </div>
+    <div class="f3">
+        <span><i></i></span>
+        <span><i></i></span>
+        <span><i></i></span>
+    </div>
+    <div class="f4">
+        <span><i></i></span>
+        <span><i></i></span>
+        <span><i></i></span>
+    </div>
+</div>
+<script>
+    const yearPartFour = document.querySelector('.four'); // Matches the class for the "4"
+    const yearPartSeven = document.querySelector('.five'); // Matches the class for the "7"
+
+    // Change "4" to "5" after 5 seconds
+    setTimeout(() => {
+        if (yearPartFour) yearPartFour.innerText = '5'; // Update the text of the "4" element
+        if (yearPartFive) yearPartFive.innerText = ''; // Clear the text of the "5" element
+    }, 5000); // Execute after 5 seconds
+</script>
+<script>
+    document.querySelector('.balloon').addEventListener('click', function () {
+        this.style.animation = 'none'; // Stop float animation
+        this.style.background = '#ffffff'; // Change to white
+        this.style.width = '0'; // Shrink width
+        this.style.height = '0'; // Shrink height
+        setTimeout(() => {
+            alert('🎉 Pop! I hope you will be kinder to yourself this year! 🎉');
+        }, 500);
+    });
+</script>
+</body>
+</html>
